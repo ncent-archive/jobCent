@@ -13,13 +13,6 @@ class SessionForm extends React.Component {
     };
   }
 
-  renderErrors() {
-    if (this.props.errors) {
-      console.log(this.props.errors);
-
-    }
-  }
-
   update(input) {
     return e =>
       this.setState({
@@ -84,7 +77,6 @@ class SessionForm extends React.Component {
                       onChange={this.update("email")}
                     />
                   </div>
-
                   <div className="alias-submit">
                     <div className="submit-button-component ">
                       <button
@@ -100,7 +92,6 @@ class SessionForm extends React.Component {
                 </form>
               </div>
             </section>
-            {this.renderErrors()}
             <div className="modal-manager ">
               <div className="modal-overlay " />
             </div>
@@ -115,7 +106,9 @@ class SessionForm extends React.Component {
             <section className="flex-container">
               <div className="login-container">
                 <h1 className="step-title">
-                  Cool! We emailed a code to {this.state.email}
+                  {this.props.errors.length === 0
+                    ? `Cool! We emailed a code to ${this.state.email}`
+                    : this.props.errors}
                 </h1>
 
                 <form
@@ -155,7 +148,6 @@ class SessionForm extends React.Component {
                 </form>
               </div>
             </section>
-            {this.renderErrors()}
             <div className="modal-manager ">
               <div className="modal-overlay " />
             </div>

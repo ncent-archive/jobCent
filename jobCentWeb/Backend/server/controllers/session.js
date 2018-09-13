@@ -27,11 +27,11 @@ module.exports = {
                 res.send({ user: userInfo });
               });
           } else {
-            res.status(400).send({
-              errors: [
+            res.status(400).send(
+              [
                 "That doesn't look like the code we sent to " + emailAddr
               ]
-            });
+            );
           }
         } else {
           res.status(400).send({ errors: ["user not found"] });

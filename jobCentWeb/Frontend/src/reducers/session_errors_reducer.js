@@ -4,12 +4,11 @@ export default (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return null;
+            return state;
         case CLEAR_ERRORS:
-            return null;
+            return state;
         case RECEIVE_SESSION_ERRORS:
-            
-            return action;
+            return action.errors;
         default:
             return state;
     }

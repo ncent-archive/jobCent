@@ -18,27 +18,21 @@
   padding-right: 24px;
   padding-left: 24px;
   flex: 1 0 auto;
-  /* display: -webkit-flex; */
+
   display: -ms-flexbox;
   display: flex;
-  /* -webkit-align-items: center; */
+
   -ms-flex-align: center;
   align-items: center;
-  /* -webkit-justify-content: center; */
+
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 100%;
-  /* opacity: 0;
-  visibility: hidden; */
+
   transition: opacity 0.15s 0s linear, visibility 0s 0.15s linear;
   background-color: #fff;
   animation: fadeIn 0.2s ease-in both;
 }
-
-/* .transfer-content.show {
-  opacity: 1;
-  visibility: visible;
-} */
 
 .close-button {
   visibility: visible;
@@ -72,13 +66,13 @@
   position: absolute;
   z-index: 1;
   display: block;
-  /* content: ""; */
+
   border-radius: 2px;
   width: 100%;
   height: 100%;
   background: currentColor;
   top: 50%;
-  /* margin-top: -2px; */
+
   height: 4px;
   color: #999;
   cursor: pointer;
@@ -103,7 +97,7 @@
 
 .enter-email {
   padding: 0 20px;
-  /* display: -webkit-flex; */
+
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
@@ -146,7 +140,6 @@
   height: 100px;
   padding-left: 0px;
   padding-right: 55px;
-  
 }
 
 .whole-amount-value::placeholder {
@@ -185,10 +178,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-bottom: -20px;
-  
 }
-
-
 
 .display-amount-fixed {
   display: -webkit-flex;
@@ -227,7 +217,6 @@ label {
   border-radius: 0;
   border: none;
   outline: #ccc solid 1px;
-  /* -webkit-appearance: none; */
   line-height: 1;
   outline: 0;
   display: inline-block;

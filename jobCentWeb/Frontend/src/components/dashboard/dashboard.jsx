@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
         .fetchBalance(this.props.currentUser)
         .then(res => {
           console.log("balance fetched#####");
-          
+
           console.log(res);
 
           let balance = res.balance.data.balance;
@@ -110,10 +110,8 @@ class Dashboard extends React.Component {
       if (this.props.fetchHistory && this.props.currentUser) {
         console.log("fetching history..");
         console.log(this.props.currentUser);
-        
-        this.props.fetchHistory(this.props.currentUser).then(res => {
-          
-        })
+
+        this.props.fetchHistory(this.props.currentUser).then(res => {});
       }
       return (
         <section className="flex-container activity-history">
@@ -123,10 +121,7 @@ class Dashboard extends React.Component {
               {" "}
               <div className="activity-no-results">
                 <div className="inline-svg-two ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 84 84"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84">
                     <path d="M80 42c0 20.949-17.051 38-38 38S4 62.949 4 42 21.051 4 42 4s38 17.051 38 38zm4 0C84 18.842 65.158 0 42 0S0 18.842 0 42s18.842 42 42 42 42-18.842 42-42z" />
                     <path d="M40 22V46.865l1.075.56 16 8.348 1.85-3.546-16-8.348L44 45.652V22h-4z" />
                   </svg>
@@ -138,12 +133,12 @@ class Dashboard extends React.Component {
                   onClick={this.handleInput("formType")}
                 >
                   Send a jobCent
-                      </a>
+                </a>
               </div>
             </div>
           </div>
-        </section>);
-      
+        </section>
+      );
     }
   }
   jobCentsTab() {
@@ -153,7 +148,6 @@ class Dashboard extends React.Component {
   }
   profileTab() {
     if (this.state.formType === "Settings") {
-  
       return (
         <div className="edit-settings-top">
           <div className="edit-header-top">
@@ -251,7 +245,6 @@ class Dashboard extends React.Component {
       <div>
         <div className="jobCent-home">
           {" "}
-       
           <div className="flex-container-home ">
             <div className="layout-account-new flex-container-home ">
               <div className="account-navigation-bar flex-container-home">
@@ -392,7 +385,6 @@ class Dashboard extends React.Component {
                 {this.profileTab()}
                 {this.signOutTab(this.props.logout)}
                 {this.transferTab()}
- 
               </section>
             </div>
           </div>

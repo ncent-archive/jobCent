@@ -137,8 +137,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
-
 .theme-button:hover {
   background-color: #16df45;
+}
+
+.errors-flex {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
