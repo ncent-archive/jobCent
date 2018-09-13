@@ -1,145 +1,112 @@
 .fs-transfer-sheet {
-  background-color: #fff;
-  transition-delay: 0s;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  bottom: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  min-width: 320px;
-  transition: background-color 0.1s 0s linear;
   animation: fadeIn 0.2s ease-in both;
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  min-width: 320px;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.1s 0 linear;
+  transition-delay: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .transfer-content {
-  padding-right: 24px;
-  padding-left: 24px;
-  flex: 1 0 auto;
-
-  display: -ms-flexbox;
-  display: flex;
-
   -ms-flex-align: center;
-  align-items: center;
-
   -ms-flex-pack: center;
+  align-items: center;
+  animation: fadeIn 0.2s ease-in both;
+  background-color: #fff;
+  display: flex;
+  flex: 1 0 auto;
   justify-content: center;
   max-width: 100%;
-
-  transition: opacity 0.15s 0s linear, visibility 0s 0.15s linear;
-  background-color: #fff;
-  animation: fadeIn 0.2s ease-in both;
+  padding-left: 24px;
+  padding-right: 24px;
+  transition: opacity 0.15s 0 linear, visibility 0 0.15s linear;
 }
 
 .close-button {
-  visibility: visible;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  animation: fadeIn 0.2s ease-in both;
   color: #999;
   cursor: pointer;
   display: initial;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  padding: 20px;
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 20px;
-  overflow: hidden;
-  transition: opacity 0.15s 0 linear, visibility 0s 0.15s linear;
-  animation: fadeIn 0.2s ease-in both;
+  transition: opacity 0.15s 0 linear, visibility 0 0.15s linear;
+  visibility: visible;
 }
 
 .close-button-icon {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  content: "";
-  border-radius: 2px;
-  width: 100%;
-  height: 100%;
-  background: currentColor;
-  left: 50%;
-  width: 4px;
-  margin-left: -2px;
-  position: absolute;
-  z-index: 1;
-  display: block;
-
-  border-radius: 2px;
-  width: 100%;
-  height: 100%;
-  background: currentColor;
-  top: 50%;
-
-  height: 4px;
-  color: #999;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  z-index: 1;
   -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
-  transform: rotate(45deg) translate3d(0, 0, 0);
   animation: fadeIn 0.2s ease-in both;
+  background: currentColor;
+  border-radius: 2px;
+  color: #999;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  left: 50%;
+  margin-left: -2px;
+  position: relative;
+  top: 50%;
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  width: 20px;
+  z-index: 1;
 }
 
 .initiate-transfer {
   margin-bottom: 0;
+  max-width: 100%;
   transition: opacity 0.1s linear;
   visibility: visible;
   width: 100%;
-  max-width: 100%;
 }
 
 .enter-email {
-  padding: 0 20px;
-
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  height: 70px;
-  z-index: 10;
-  -webkit-align-items: flex-start;
   -ms-flex-align: start;
+  -webkit-align-items: flex-start;
   align-items: flex-start;
-  height: auto;
-  min-height: 55px;
-  font-size: 18px;
-  margin-bottom: 20px;
+  animation: fadeIn 0.2s ease-in both;
   border: 1px solid #ccc;
   border-radius: 6px;
-  animation: fadeIn 0.2s ease-in both;
+  display: flex;
+  font-size: 18px;
+  height: auto;
+  margin-bottom: 20px;
+  min-height: 55px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .whole-amount-value {
-  margin: 0;
-  vertical-align: baseline;
-  display: block;
+  -webkit-appearance: none;
+  background: 0 0;
   border: 0;
   border-radius: 0;
-  outline: #ccc solid 1px;
-  -webkit-appearance: none;
-  width: 100%;
-  line-height: 1;
-  background: 0 0;
-  height: 110px;
-  color: #fff;
-  text-align: center;
-  outline: 0;
-  font-size: 75px;
-  transition: font-size 0.2s cubic-bezier(0.1, 0.1, 0.1, 1);
-  height: 55px;
   color: #00c730;
+  display: block;
+  font-size: 75px;
   height: 100px;
-  padding-left: 0px;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  padding-left: 0;
   padding-right: 55px;
+  text-align: center;
+  transition: font-size 0.2s cubic-bezier(0.1, 0.1, 0.1, 1);
+  vertical-align: baseline;
+  width: 100%;
 }
 
 .whole-amount-value::placeholder {
@@ -147,57 +114,50 @@
 }
 
 .currency-symbol {
+  color: #204fc7;
   font-size: 50px;
   letter-spacing: 0;
-  color: #00c730;
-  color: #204fc7;
   padding-left: 17px;
 }
+
 .bottom-margin {
   margin-bottom: 20px;
 }
+
 .display-amount-input {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  min-height: 120px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-  border: 1px solid;
-  border-radius: 4px;
-  overflow: hidden;
-  font-size: 18px;
-  margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  align-items: center;
   border: 1px solid #ccc;
   border-radius: 6px;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
   margin-bottom: -20px;
+  min-height: 120px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .display-amount-fixed {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  display: flex;
   justify-content: center;
-  min-height: 120px;
   margin-bottom: 20px;
+  min-height: 120px;
 }
 
 label {
-  padding-top: 16px;
-  padding-bottom: 12px;
   color: #ccc;
+  padding-bottom: 12px;
+  padding-top: 16px;
 }
 
 .token-list {
@@ -208,74 +168,70 @@ label {
   display: flex;
   flex-direction: row;
   padding-left: 15px;
-  width: 100%;
-  padding-top: 11px;
   padding-right: 20px;
+  padding-top: 11px;
+  width: 100%;
 }
 
 .transfer-input-field {
-  border-radius: 0;
   border: none;
-  outline: #ccc solid 1px;
-  line-height: 1;
-  outline: 0;
+  border-radius: 0;
   display: inline-block;
+  font-size: 18px;
+  height: 34px;
+  line-height: 1;
+  margin-bottom: 10px;
+  max-width: 100%;
+  outline: 0;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  max-width: 100%;
-  height: 34px;
-  margin-bottom: 10px;
-  font-size: 18px;
 }
 
 .transfer-button {
-  background-color: #00c730;
   background-color: #204fc7;
 }
+
 .transfer-button:hover {
   background-color: #2859d6;
 }
 
 .anchor {
-  position: absolute;
   bottom: -3px;
   height: 1px;
   left: -1px;
+  position: absolute;
   right: -1px;
 }
 
 .error-box {
-  display: none;
-  position: absolute;
-  top: -6px;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  transition: opacity 0s 0s linear;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-transform: scaleY(0);
+  -webkit-transform-origin: 0 0;
   align-items: center;
-  padding: 5px 20px;
-  text-align: center;
-  min-height: 70px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 0 0 6px 6px;
   color: #e60000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  min-height: 70px;
+  opacity: 0;
+  padding: 5px 20px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -6px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: opacity 0 0 linear;
 }
 
 @keyframes fadeOut {
