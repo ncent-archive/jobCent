@@ -1,10 +1,7 @@
 const User = require("../models").User;
 const otplib = require("otplib");
-const email = require("./email.js");
 const awsEmail = require("./awsEmail.js");
 const bcrypt = require("bcrypt");
-const keys = require("./secret.js");
-const aws = require("aws-sdk");
 const nCentSDK = require("ncent-sandbox-sdk");
 const nCentSDKInstance = new nCentSDK();
 
@@ -32,9 +29,9 @@ module.exports = {
           .then(user => {
             const validCode = bcrypt.compareSync(token, tokenHash);
             console.log(token);
-            
+
             console.log("initially valid? " + validCode);
-            awsEmail.sendMail(keys.from, emailAddr, token);
+            awsEmail.sendMail(emailAddr, token);
             res.status(200).send(user.email);
           })
           .catch(error => res.status(400).send(error));
@@ -68,7 +65,7 @@ module.exports = {
               console.log(token);
               console.log("initially valid? " + validCode);
 
-              awsEmail.sendMail(keys.from, emailAddr, html);
+              awsEmail.sendMail(emailAddr, html);
               res.status(201).send(user);
             })
             .catch(error => {
@@ -110,8 +107,16 @@ module.exports = {
       }
     });
   },
-
+  getCurrent(req, res) {
+    new Promise(function(resolve, reject) {
+      console.log(req);
+      return res.status(200).send("done")
+    });
+  },
   getOne(req, res) {
+    console.log(req.session.user);
+    console.log(req.cookies);
+
     let data = {};
     const tokenType = "d3c5add3-382e-4505-815b-72221c7f0c45";
 

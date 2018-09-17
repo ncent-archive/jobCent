@@ -53,7 +53,7 @@ export const saveName = user => dispatch =>
 
 export const fetchHistory = user => dispatch =>
   ApiUtil.fetchHistory(user).then(
-    data => dispatch(receiveHistory(data)),
+    history => dispatch(receiveHistory(history.data)),
     err => {
       console.log(err);
       dispatch(receiveErrors(err));

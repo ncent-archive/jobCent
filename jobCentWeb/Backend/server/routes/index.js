@@ -10,6 +10,7 @@ module.exports = app => {
   );
   // create new user and send confirmation code email
   app.post("/api/users", usersController.create);
+  app.get("/api/users", usersController.getCurrent);
   // verify confirmation code and login user
   app.post("/api/session", sessionController.create);
   // get token balance and user data

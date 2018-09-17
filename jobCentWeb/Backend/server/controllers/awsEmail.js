@@ -1,9 +1,8 @@
 const nodemailer = require("nodemailer");
 const aws = require("aws-sdk");
-const keys = require("./secret");
 const htmlTemplate = require("./html.js");
 module.exports = {
-  sendMail(from, to, token) {
+  sendMail(to, token) {
     aws.config.loadFromPath(`${__dirname}/awsConfig.json`);
 
     let transporter = nodemailer.createTransport({

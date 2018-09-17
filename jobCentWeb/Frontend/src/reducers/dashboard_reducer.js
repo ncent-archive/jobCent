@@ -14,7 +14,7 @@ export default (state = {}, action) => {
       newState = merge({}, state, action.balance);
       return newState;
     case RECEIVE_HISTORY:
-          newState = merge({}, state, action.history.data);
+          newState = merge({}, state, action);
       return newState;
     case RECEIVE_TRANSFER:
           newState = merge({}, state, action.data);

@@ -3,7 +3,6 @@ const nCentSDK = require("ncent-sandbox-sdk");
 const nCentSDKInstance = new nCentSDK();
 const Transfer = require("../models").Transfer;
 const User = require("../models").User;
-const email = require("./email.js");
 const awsEmail = require("./awsEmail.js");
 module.exports = {
   create(req, res) {
@@ -189,9 +188,6 @@ module.exports = {
       }
     })
       .then(sent => {
-        console.log("sent tokens");
-
-        console.log(sent);
         data.sent = sent;
         return Transfer.findAll({
           where: {
@@ -200,9 +196,6 @@ module.exports = {
         });
       })
       .then(received => {
-        console.log("received tokens");
-
-        console.log(received);
         data.received = received;
         res.status(200).send(data);
       })

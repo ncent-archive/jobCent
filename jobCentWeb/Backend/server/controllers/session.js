@@ -15,6 +15,7 @@ module.exports = {
           console.log("is the code valid? " + validCode);
           if (validCode) {
             console.log("code valid! logging in...");
+            
             //since user confirmed their email via the code, set their status to active
             user
               .update({
@@ -34,7 +35,7 @@ module.exports = {
             );
           }
         } else {
-          res.status(400).send({ errors: ["user not found"] });
+          res.status(400).send(["user not found"]);
         }
       })
       .catch(error => res.status(400).send(error));
