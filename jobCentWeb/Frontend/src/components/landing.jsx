@@ -8,6 +8,7 @@ import diagnalPhone from "../img/diagnal_phone.png";
 import standupPhone from "../img/standup_phone.png";
 import phone from "../img/phone.png";
 
+
 class Landing extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -21,7 +22,6 @@ class Landing extends React.Component {
   //        }
   //    }
   // }
-
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
@@ -72,14 +72,12 @@ class Landing extends React.Component {
             <div>
               <header className="about-header-bar">
                 <div className="ncent-logo">
-                  
                   <div className="test-button small">
                     <img src={ncentLogo} alt="ncent logo" />
                   </div>
                   <div className="logo-title">jobCent</div>
                 </div>
                 <div className="header-sign-in">
-                  
                   <Link to="/login" className="test-button">
                     Sign In
                   </Link>
@@ -88,7 +86,6 @@ class Landing extends React.Component {
 
               <div className="about-content">
                 <div className="app-image">
-                 
                   <picture>
                     <source srcSet={diagnalPhone} media="(min-width: 1278px)" />
                     <source srcSet={standupPhone} media="(min-width: 1024px)" />
@@ -111,10 +108,9 @@ class Landing extends React.Component {
                     and bonuses for those who take part in finding our ideal
                     employee.
                   </p>
-                 
+
                   <div>
                     <div className="content-sign-in">
-                      
                       <a href="https://angel.co/ncent/jobs/368555-full-stack-developer">
                         AngelList
                       </a>

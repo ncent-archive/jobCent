@@ -12,7 +12,7 @@ class App extends Component {
         <Switch>
           <ProtectedRoute path="/dashboard" component={DashboardContainer} />
           <AuthRoute path="/login" component={SessionFormContainer} />
-          <Route exact path="/" component={Landing} />
+          <AuthRoute exact path="/" component={Landing} />
           <Redirect to="/" />
         </Switch>
       </div>;
